@@ -1,0 +1,32 @@
+tg:
+  token: 7819999022:AAF3FJD2DQ3wxWR50VaMcga-xFP-g_hn0Bw
+spring:
+  application:
+    name: match_opinion
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5439/postgresDB
+    username: postgresUser
+    password: postgresPW
+  liquibase:
+    enabled: true
+    change-log: db/changelog/db.changelog-master.xml
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    open-in-view: false
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+aws:
+  region: eu-central-1
+  s3:
+    endpoint: http://127.0.0.1:9000
+  access:
+    key: youraccesskey
+    secret: yoursecretkey
+server:
+  port: 8082
