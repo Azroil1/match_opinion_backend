@@ -1,11 +1,8 @@
 package ru.amirmanyanov.matchopinion.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import ru.amirmanyanov.matchopinion.models.dto.FilmDto;
-import ru.amirmanyanov.matchopinion.models.entity.Film;
-import ru.amirmanyanov.matchopinion.repository.FilmRepository;
 import ru.amirmanyanov.matchopinion.service.FilmService;
 
 import java.util.List;
@@ -22,5 +19,11 @@ public class FilmController {
     @GetMapping("/allfilms")
     public List<FilmDto> getAllFilms() {
         return filmService.getAllFilms();
+    }
+
+    @PostMapping("/createRoom")
+    public ResponseEntity<?> createRoom(@RequestBody Long idFounderRoom, @RequestBody Integer countRoomMembers){
+        
+        return null;
     }
 }

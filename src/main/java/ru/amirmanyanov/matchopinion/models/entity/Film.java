@@ -31,26 +31,26 @@ public class Film {
     private String urlFilms;
     @Column(name = "oscars")
     private boolean oscars;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "film_actors",
     joinColumns = @JoinColumn(name = "id_film"),
     inverseJoinColumns = @JoinColumn(name = "id_actor"))
     private Set<Actor> actors;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "film_director",
             joinColumns = @JoinColumn(name = "id_film"),
             inverseJoinColumns = @JoinColumn(name = "id_director")
     )
     private Set<Director> directors;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "film_genre",
             joinColumns = @JoinColumn(name = "id_film"),
             inverseJoinColumns = @JoinColumn(name = "id_genre")
     )
     private Set<Genre> genres;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "film_country",
             joinColumns = @JoinColumn(name = "id_film"),

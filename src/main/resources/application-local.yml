@@ -16,6 +16,13 @@ spring:
       ddl-auto: none
     show-sql: true
     open-in-view: false
+  data:
+    redis:
+      host: localhost
+      port: 6739
+      password: ""
+
+
 springdoc:
   api-docs:
     enabled: true

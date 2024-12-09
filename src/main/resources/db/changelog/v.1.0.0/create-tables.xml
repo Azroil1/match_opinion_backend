@@ -5,4 +5,10 @@
     <changeSet id="1" author="amir">
         <sqlFile path="db/changelog/v.1.0.0/films.sql"/>
     </changeSet>
+    <changeSet id="2" author="amir">
+        <sqlFile path="db/changelog/v.1.0.0/inserttables.sql"/>
+    </changeSet>
+    <changeSet id="3" author="amir">
+        <sqlFile path="db/changelog/v.1.0.0/script3.sql"/>
+    </changeSet>
 </databaseChangeLog>
