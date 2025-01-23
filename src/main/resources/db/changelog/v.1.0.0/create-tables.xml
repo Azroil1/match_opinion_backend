@@ -11,4 +11,7 @@
     <changeSet id="3" author="amir">
         <sqlFile path="db/changelog/v.1.0.0/script3.sql"/>
     </changeSet>
+    <changeSet id="4" author="amir">
+        <sqlFile path="db/changelog/v.1.0.0/upadate_films.sql"/>
+    </changeSet>
 </databaseChangeLog>

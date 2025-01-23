@@ -12,6 +12,6 @@ public class FilmMappers {
                 film.isOscars(), film.getActors().stream().map(ActorMappers::toDto).collect(Collectors.toSet()),
                 film.getDirectors().stream().map(DirectorMappers::toDto).collect(Collectors.toSet()),
                 film.getCountries().stream().map(CountryMappers::toDto).collect(Collectors.toSet()),
-                film.getGenres().stream().map(GenreMappers::toDto).collect(Collectors.toSet()));
+                film.getGenres().stream().map(GenreMappers::toDto).collect(Collectors.toSet()), film.getId().toString());
     }
 }

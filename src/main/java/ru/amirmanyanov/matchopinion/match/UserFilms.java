@@ -1,20 +1,29 @@
 package ru.amirmanyanov.matchopinion.match;
 
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Map;
 import java.util.Set;
-
+@NoArgsConstructor
 public class UserFilms implements LikesAndDislikeInterface {
     @Getter
-    private final Long userId;
+    //сделать final и конструктор по умолчанию
+    private Long userId;
     @Getter
     @Setter
-    private Set<String> userRooms;
+    private Map<String, String> idUserRoomsAndNameRooms;
     @Setter
+    @Getter
     private Set<String> likeFilms;
     @Setter
+    @Getter
     private Set<String> dislikeFilms;
+    @Setter
+    @Getter
+    private int page = 0;
     public UserFilms(Long userId) {
         this.userId = userId;
     }

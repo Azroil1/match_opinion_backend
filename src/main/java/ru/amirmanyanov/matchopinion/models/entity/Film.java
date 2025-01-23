@@ -57,4 +57,8 @@ public class Film {
             inverseJoinColumns = @JoinColumn(name = "id_country")
     )
     private Set<Country> countries;
+    @Column(name = "duration")
+    private int duration;
+    @Column(name = "rating")
+    private double rating;
 }

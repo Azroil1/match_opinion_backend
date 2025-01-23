@@ -1,8 +1,12 @@
 package ru.amirmanyanov.matchopinion.controllers;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.amirmanyanov.matchopinion.models.dto.FilmDto;
+import ru.amirmanyanov.matchopinion.models.entity.Film;
 import ru.amirmanyanov.matchopinion.service.FilmService;
 
 import java.util.List;
@@ -20,10 +24,9 @@ public class FilmController {
     public List<FilmDto> getAllFilms() {
         return filmService.getAllFilms();
     }
+    @GetMapping("getfilm/{room}/{id}")
+    public ResponseEntity<Slice<Film>> getFilm(@PathVariable String room, @PathVariable long id) throws Exception {
+        return ResponseEntity.ok(filmService.getFilmByUser(room,id));
 
-    @PostMapping("/createRoom")
-    public ResponseEntity<?> createRoom(@RequestBody Long idFounderRoom, @RequestBody Integer countRoomMembers){
-        
-        return null;
     }
 }

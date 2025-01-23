@@ -1,8 +1,8 @@
 package ru.amirmanyanov.matchopinion.models.dto;
 
 public enum GenreDto {
-    УЖАСЫ,
-    ДРАМА,
+    Ужасы,
+    Драма,
     Комедия,
     Триллер,
     Мелодрама,
