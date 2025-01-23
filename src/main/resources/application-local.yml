@@ -1,5 +1,5 @@
 tg:
-  token: 7819999022:AAF3FJD2DQ3wxWR50VaMcga-xFP-g_hn0Bw
+  token:
 spring:
   application:
     name: match_opinion
